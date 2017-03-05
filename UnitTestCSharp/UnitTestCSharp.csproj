@@ -58,7 +58,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApplication1\VersionCSharp.csproj">
+    <ProjectReference Include="..\VersionCSharp\VersionCSharp.csproj">
       <Project>{1e595fb4-1dc6-4fa1-804b-d8761d63f646}</Project>
       <Name>VersionCSharp</Name>
     </ProjectReference>
