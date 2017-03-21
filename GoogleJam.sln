@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VersionCSharp", "AlienLanguage\VersionCSharp\VersionCSharp.csproj", "{1E595FB4-1DC6-4FA1-804B-D8761D63F646}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpVersion", "MinVectorProductByPermutation\CSharpVersion\CSharpVersion.csproj", "{3626C326-8890-44E2-A112-059D2AF5CA88}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpVersion", "MinVectorProductByPermutation\FSharpVersion\FSharpVersion.fsproj", "{3D039329-FBA4-4D24-B8DD-453FB04A005E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CountingSheep", "CountingSheep", "{35FCF5DC-64FD-440A-B9D2-D25CEC36A58F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingSheep", "CountingSheep\CountingSheep\CountingSheep.csproj", "{D3722A8D-CE02-49CC-BC9C-79E0ACF24788}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{3D039329-FBA4-4D24-B8DD-453FB04A005E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D039329-FBA4-4D24-B8DD-453FB04A005E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D039329-FBA4-4D24-B8DD-453FB04A005E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3722A8D-CE02-49CC-BC9C-79E0ACF24788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3722A8D-CE02-49CC-BC9C-79E0ACF24788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3722A8D-CE02-49CC-BC9C-79E0ACF24788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3722A8D-CE02-49CC-BC9C-79E0ACF24788}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +61,6 @@ Global
 		{801DF0EE-B4C5-4086-B440-2590283C243D} = {2B63E15F-1EB6-4F5D-9BB7-F0D4205B4CB0}
 		{3626C326-8890-44E2-A112-059D2AF5CA88} = {B65984C6-5844-43E5-82D4-293FEE879FF9}
 		{3D039329-FBA4-4D24-B8DD-453FB04A005E} = {B65984C6-5844-43E5-82D4-293FEE879FF9}
+		{D3722A8D-CE02-49CC-BC9C-79E0ACF24788} = {35FCF5DC-64FD-440A-B9D2-D25CEC36A58F}
 	EndGlobalSection
 EndGlobal
