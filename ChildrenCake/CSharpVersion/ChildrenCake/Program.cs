@@ -6,9 +6,11 @@ namespace ChildrenCake
 {
     class Program
     {
+        //https://code.google.com/codejam/contest/5304486/dashboard
         static void Main(string[] args)
         {
-            var sw = File.OpenText(@"C:\Users\Sergey\AppData\Local\Temp\A-small-practice.in.txt");
+            //var sw = File.OpenText(@"C:\Users\Sergey\AppData\Local\Temp\A-small-practice.in.txt");
+            var sw = File.OpenText(@"C:\Users\Sergey\Downloads\A-large-practice.in"); 
 
             var str = sw.ReadLine();
             int amountTest = int.Parse(str);
@@ -21,7 +23,7 @@ namespace ChildrenCake
                 Console.WriteLine(ms.Result);
                 Console.WriteLine("/******************************/");
 
-                if (i == 10)
+                if (i == 20)
                     break;
             }
         }

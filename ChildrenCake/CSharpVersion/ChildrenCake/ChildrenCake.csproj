@@ -59,6 +59,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Tests\A-large-practice.in" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tests\A-small-practice.in.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
