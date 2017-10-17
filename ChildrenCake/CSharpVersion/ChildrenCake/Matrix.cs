@@ -9,6 +9,7 @@ namespace ChildrenCake
         private readonly int _column;
         private readonly List<T> _elements;
         private readonly T _defaultValue = default(T);
+        private int _alreadySetElements = 0;
 
         public Matrix(int row, int column)
         {
@@ -23,7 +24,12 @@ namespace ChildrenCake
         public void SetElementAtRowColumn(int row, int column, T value)
         {
             int index = GetFlatIndex(row, column);
+            if (_elements[index].Equals(default(T)))
+            {
+                _alreadySetElements++;
+            }
             _elements[index] = value;
+            
         }
 
         private T GetElementAtRowColumn(int row, int column)
@@ -47,7 +53,9 @@ namespace ChildrenCake
             return new MatrixCoord() { Row = row, Column = column };
         }
 
-        
+        public bool Filled => _row * _column == _alreadySetElements;
+        public string Detail => $"expected {_row * _column}, actial { _alreadySetElements}";
+
     }
 
     public class MatrixCoord

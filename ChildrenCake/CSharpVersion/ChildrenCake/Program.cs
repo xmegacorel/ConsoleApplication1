@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace ChildrenCake
 {
@@ -19,12 +20,36 @@ namespace ChildrenCake
             {
                 var info = ReadTest(sw);
                 MatrixSolver ms = new MatrixSolver(info.Row, info.Column, info.Dict);
-                Console.WriteLine(info.RawText);
-                Console.WriteLine(ms.Result);
-                Console.WriteLine("/******************************/");
+                if (!ms.Succes)
+                {
+                    ms = new MatrixSolver(info.Row, info.Column, info.Dict.Reverse());
+                    if (!ms.Succes)
+                    {
+                        var length = info.Dict.Count;
+                        for (int index = 2; i < length; i++)
+                        {
+                            var element = info.Dict.ElementAt(index);
+                            var newSequense = (new[] { element }).Concat(info.Dict.Take(index - 1)).Concat(info.Dict.Skip(index + 1));
+                            ms = new MatrixSolver(info.Row, info.Column, newSequense);
+                            if (ms.Succes)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
 
-                if (i == 20)
-                    break;
+                if (!ms.Succes)
+                {
+                    Console.WriteLine(info.RawText);
+                    Console.WriteLine(ms.Result);
+                    Console.WriteLine($"All cells are filled {ms.Succes}. Detail {ms.Detail}");
+                    Console.WriteLine("/******************************/");
+                }
+
+                Console.Write("Current element " + i);
+                char c = (char)13;
+                Console.Write(c);
             }
         }
 

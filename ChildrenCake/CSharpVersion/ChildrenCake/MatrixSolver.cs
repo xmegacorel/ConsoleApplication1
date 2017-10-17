@@ -10,7 +10,7 @@ namespace ChildrenCake
         private Matrix<char> _matrix;
         private Dictionary<int, char> _proportion = new Dictionary<int, char>();
 
-        public MatrixSolver(int row, int column, Dictionary<int, char> letters)
+        public MatrixSolver(int row, int column, IEnumerable<System.Collections.Generic.KeyValuePair<int, char>> letters)
         {
             if (row < 1)
             {
@@ -22,18 +22,18 @@ namespace ChildrenCake
                 throw new ArgumentException($"{nameof(column)} has incorrect value");
             }
 
-            if (letters.Count == 0)
+            if (letters.Count() == 0)
             {
                 throw new ArgumentException("Please, specify letters");
             }
 
             _matrix = new Matrix<char>(row, column);
-            ApplyValues(_matrix, letters);
+            ApplyValues(_matrix, letters.Reverse());
 
             Solve(letters);
         }
 
-        private void ApplyValues(Matrix<char> matrix, Dictionary<int, char> letters)
+        private void ApplyValues(Matrix<char> matrix, IEnumerable<System.Collections.Generic.KeyValuePair<int, char>> letters)
         {
             foreach (var pair in letters)
             {
@@ -42,7 +42,7 @@ namespace ChildrenCake
             }
         }
 
-        private void Solve(Dictionary<int, char> letters)
+        private void Solve(IEnumerable<System.Collections.Generic.KeyValuePair<int, char>> letters)
         {
             foreach (var pair in letters)
             {
@@ -163,6 +163,10 @@ namespace ChildrenCake
         }
     
         public string Result => _matrix.Print();
+
+        public bool Succes => _matrix.Filled;
+
+        public string Detail => _matrix.Detail;
 
         class RectVolume
         {
