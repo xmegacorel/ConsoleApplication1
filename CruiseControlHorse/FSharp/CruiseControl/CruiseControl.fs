@@ -1,6 +1,8 @@
 module CruiseControl
-
+(*
 [<EntryPoint>]
 let main argv =
-    printfn "%A" argv
+    let solver = new HorseInfo()
+    printf "%f" solver
     0 // return an integer exit code
+*)
